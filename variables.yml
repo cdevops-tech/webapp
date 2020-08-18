@@ -5,7 +5,7 @@
         var1: "Hello"
         var2: "World"
         
-    tasks:
+  tasks:
     -   name: Print the variable1 
         command: echo "variable1 is {{ var1 }}"
         register: command_output
