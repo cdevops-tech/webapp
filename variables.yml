@@ -1,0 +1,17 @@
+- 
+  name : Learn how to use variables
+  hosts: localhost
+  vars:
+        var1: "Hello"
+        var2: "World"
+        
+    tasks:
+    -   name: Print the variable1 
+        command: echo "variable1 is {{ var1 }}"
+        register: command_output
+    -   debug: msg="{{command_output.stdout}}"
+
+    -   name: Print the variable2
+        command: echo "variable1 is {{ var2 }}"
+        register: command_output
+    -   debug: msg="{{command_output.stdout}}"
